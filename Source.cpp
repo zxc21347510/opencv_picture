@@ -65,13 +65,13 @@ int main(int argc, char* argv[])
 	}
 	//namedWindow("全景拼接", 0);
 	//imshow("全景拼接", pano);
-	imwrite("C:\\Users\\User\\Desktop\\全景拼接.jpg", pano);
+	imwrite("/home/project108/opencv_picture/result1.jpg", pano);
 	cout << "合成結束" << endl;
-	cutPicture("C:\\Users\\User\\Desktop\\全景拼接.jpg");
-	imwrite("C:\\Users\\User\\Desktop\\全景拼接2.jpg", picture);
+	cutPicture("/home/project108/opencv_picture/result1.jpg");
+	imwrite("/home/project108/opencv_picture/result2.jpg", picture);
 	cout << "切割結束" << endl;
-	resizePicture("C:\\Users\\User\\Desktop\\全景拼接2.jpg");
-	imwrite("C:\\Users\\User\\Desktop\\全景拼接3.jpg", cut);
+	resizePicture("home/project108/opencv_picture/result2.jpg");
+	imwrite("/home/project108/opencv_picture/result3.jpg", cut);
 	cout << "resize結束" << endl;
 	system("pause");
 	return 0;
@@ -94,7 +94,7 @@ void parseCmdArgs(int number, string* array)
 void cutPicture(string name)
 {
 	Mat tmp = imread(name);
-	Mat img = imread("C:\\Users\\User\\Desktop\\tests\\DSC_0039.jpg");
+	//Mat img = imread("/home/project108/opencv_picture/result.jpg");
 
 	//裁切區域的 x 與 y 座標（左上角）
 	int x = 0;
