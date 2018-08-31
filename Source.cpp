@@ -23,7 +23,7 @@ void parseCmdArgs(int number, string *array);
 void cutPicture(string name);
 void resizePicture(string name);
 
-int main(int argc, char* argv[])
+int main()
 {
 	//導入拼接圖像 
 	int number;
@@ -93,7 +93,7 @@ int main(int argc, char* argv[])
 	resizePicture("result2.jpg");
 	imwrite("result3.jpg", cut);
 	cout << "resize結束" << endl;*/
-	system("pause");
+	//system("pause");
 	return 0;
 }
 
