@@ -31,13 +31,15 @@ int main(int argc, char* argv[])
 	cout << "please inout number of picuture" << endl;
 	cin >> number;
 
-	string tmp[9] =
+	string tmp[14] =
 	{
-		"C:\\Users\\User\\Desktop\\tests\\DSC_0039.jpg","C:\\Users\\User\\Desktop\\tests\\DSC_0040.jpg",
-		"C:\\Users\\User\\Desktop\\tests\\DSC_0041.jpg","C:\\Users\\User\\Desktop\\tests\\DSC_0042.jpg",
-		"C:\\Users\\User\\Desktop\\tests\\DSC_0043.jpg","C:\\Users\\User\\Desktop\\tests\\DSC_0044.jpg",
-		"C:\\Users\\User\\Desktop\\tests\\DSC_0045.jpg","C:\\Users\\User\\Desktop\\tests\\DSC_0046.jpg",
-		"C:\\Users\\User\\Desktop\\tests\\DSC_0047.jpg"
+		"/home/project108/opencv_picture/1.JPG","/home/project108/opencv_picture/2.JPG",
+		"/home/project108/opencv_picture/3.JPG","/home/project108/opencv_picture/4.JPG",
+		"/home/project108/opencv_picture/5.JPG","/home/project108/opencv_picture/6.JPG",
+		"/home/project108/opencv_picture/7.JPG","/home/project108/opencv_picture/8.JPG",
+		"/home/project108/opencv_picture/9.JPG","/home/project108/opencv_picture/10.JPG",
+		"/home/project108/opencv_picture/11.JPG","/home/project108/opencv_picture/12.JPG",
+		"/home/project108/opencv_picture/13.JPG","/home/project108/opencv_picture/14.JPG"
 	};
 
 	array = new string[number];
