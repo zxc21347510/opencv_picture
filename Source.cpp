@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
 	imwrite("/home/project108/opencv_picture/result3.jpg", cut);
 	cout << "resize結束" << endl;*/
 	
-	imwrite("result1.jpg", pano);
+	/*imwrite("result1.jpg", pano);
 	cout << "合成結束" << endl;
 	/*cutPicture("result1.jpg");
 	imwrite("result2.jpg", picture);
