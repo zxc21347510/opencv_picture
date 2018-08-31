@@ -1,7 +1,7 @@
 #include <fstream> 
-#include "opencv2/highgui/highgui.hpp" 
-#include "opencv2/stitching.hpp"
 #include <iostream> 
+#include <opencv2/opencv.hpp>
+#include <opencv2/stitching.hpp>
 
 using namespace cv;
 using namespace std;
