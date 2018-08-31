@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 		cout << array[i] << endl;
 	}
 
-	parseCmdArgs(number, array);
+	/*parseCmdArgs(number, array);
 	Mat pano;
 	Stitcher stitcher = Stitcher::createDefault(false);
 	Stitcher::Status status = stitcher.stitch(imgs, pano);//拼接 
