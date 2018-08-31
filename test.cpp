@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
+#include <iostream>
 
+using namespace std;
 using namespace cv;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
 
   // 檢查是否有指定輸入影像檔案
   if ( argc != 2 ) {
@@ -21,14 +24,7 @@ int main(int argc, char* argv[]) {
     return -1;
   }
 
-  // 建立視窗
-  namedWindow("Display Image", WINDOW_AUTOSIZE);
-
-  // 用視窗顯示影像
-  imshow("Display Image", image);
-
-  // 顯示視窗，直到任何鍵盤輸入後才離開
-  waitKey(0);
+  imwrite("test.jpg",image);
 
   return 0;
 }
