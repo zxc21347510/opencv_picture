@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 	cout << "please inout number of picuture" << endl;
 	cin >> number;
 
-	string tmp[14] =
+	/*string tmp[14] =
 	{
 		"/home/project108/opencv_picture/1.JPG","/home/project108/opencv_picture/2.JPG",
 		"/home/project108/opencv_picture/3.JPG","/home/project108/opencv_picture/4.JPG",
@@ -40,6 +40,17 @@ int main(int argc, char* argv[])
 		"/home/project108/opencv_picture/9.JPG","/home/project108/opencv_picture/10.JPG",
 		"/home/project108/opencv_picture/11.JPG","/home/project108/opencv_picture/12.JPG",
 		"/home/project108/opencv_picture/13.JPG","/home/project108/opencv_picture/14.JPG"
+	};*/
+	
+	string tmp[14] =
+	{
+		"1.JPG","2.JPG",
+		"3.JPG","4.JPG",
+		"5.JPG","6.JPG",
+		"7.JPG","8.JPG",
+		"9.JPG","10.JPG",
+		"11.JPG","12.JPG",
+		"13.JPG","14.JPG"
 	};
 
 	array = new string[number];
@@ -65,13 +76,22 @@ int main(int argc, char* argv[])
 	}
 	//namedWindow("全景拼接", 0);
 	//imshow("全景拼接", pano);
-	imwrite("/home/project108/opencv_picture/result1.jpg", pano);
+	/*imwrite("/home/project108/opencv_picture/result1.jpg", pano);
 	cout << "合成結束" << endl;
 	cutPicture("/home/project108/opencv_picture/result1.jpg");
 	imwrite("/home/project108/opencv_picture/result2.jpg", picture);
 	cout << "切割結束" << endl;
 	resizePicture("home/project108/opencv_picture/result2.jpg");
 	imwrite("/home/project108/opencv_picture/result3.jpg", cut);
+	cout << "resize結束" << endl;*/
+	
+	imwrite("result1.jpg", pano);
+	cout << "合成結束" << endl;
+	cutPicture("result1.jpg");
+	imwrite("result2.jpg", picture);
+	cout << "切割結束" << endl;
+	resizePicture("result2.jpg");
+	imwrite("result3.jpg", cut);
 	cout << "resize結束" << endl;
 	system("pause");
 	return 0;
