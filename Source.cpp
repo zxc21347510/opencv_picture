@@ -87,12 +87,12 @@ int main(int argc, char* argv[])
 	
 	imwrite("result1.jpg", pano);
 	cout << "合成結束" << endl;
-	cutPicture("result1.jpg");
+	/*cutPicture("result1.jpg");
 	imwrite("result2.jpg", picture);
 	cout << "切割結束" << endl;
 	resizePicture("result2.jpg");
 	imwrite("result3.jpg", cut);
-	cout << "resize結束" << endl;
+	cout << "resize結束" << endl;*/
 	system("pause");
 	return 0;
 }
