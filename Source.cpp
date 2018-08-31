@@ -13,7 +13,7 @@ using namespace std;
 	y->垂直 往下+
 */
 
-
+/*
 vector<Mat> imgs;		//保存拼接的原始圖像向量 
 Mat picture;			//保存切割後的圖像
 Mat cut;				//
@@ -21,7 +21,7 @@ Mat cut;				//
 //導入所有原始拼接圖像函數
 void parseCmdArgs(int number, string *array);
 void cutPicture(string name);
-void resizePicture(string name);
+void resizePicture(string name);*/
 
 int main()
 {
@@ -98,7 +98,7 @@ int main()
 }
 
 //導入所有原始拼接圖像函數
-void parseCmdArgs(int number, string* array)
+/*void parseCmdArgs(int number, string* array)
 {
 	for (int i = 0;i<number;i++)
 	{
@@ -143,6 +143,6 @@ void resizePicture(string name)
 	imshow("放大",dstImage2);
 	*/
 
-	Mat tmp = imread(name);
+	/*Mat tmp = imread(name);
 	resize(tmp, cut, Size(tmp.cols/2, tmp.rows/2), 0, 0, CV_INTER_LINEAR);
 }
