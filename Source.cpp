@@ -1,7 +1,7 @@
-#include <fstream> 
-#include <iostream> 
+//#include <fstream>
+#include <iostream>
 #include <opencv2/opencv.hpp>
-#include <opencv2/stitching.hpp>
+//#include <opencv2/stitching.hpp>
 
 using namespace cv;
 using namespace std;
@@ -14,7 +14,7 @@ using namespace std;
 */
 
 /*
-vector<Mat> imgs;		//保存拼接的原始圖像向量 
+vector<Mat> imgs;		//保存拼接的原始圖像向量
 Mat picture;			//保存切割後的圖像
 Mat cut;				//
 
@@ -25,7 +25,7 @@ void resizePicture(string name);*/
 
 int main()
 {
-	//導入拼接圖像 
+	//導入拼接圖像
 	int number;
 	string *array;
 	cout << "please inout number of picuture" << endl;
