@@ -1,0 +1,2 @@
+/home/project108/opencv_picture/build/CMakeFiles/edit_cache.dir
+/home/project108/opencv_picture/build/CMakeFiles/rebuild_cache.dir

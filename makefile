@@ -1,2 +1,3 @@
-mainprog.o:Source.cpp
-	g++ `pkg-config --cflags opencv` -o t Source.cpp `pkg-config --libs opencv`
+mainprog.o:source.cpp
+	g++ `pkg-config --cflags opencv` -o t source.cpp `pkg-config --libs opencv`
+

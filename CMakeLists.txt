@@ -3,6 +3,16 @@
 #
 # ----------------------------------------------------------------------------
 
+macro(ocv_check_dependencies)
+  set(OCV_DEPENDENCIES_FOUND TRUE)
+  foreach(d ${ARGN})
+    if(d MATCHES "^opencv_[^ ]+$" AND NOT HAVE_${d})
+      set(OCV_DEPENDENCIES_FOUND FALSE)
+      break()
+    endif()
+  endforeach()
+endmacro()
+
 cmake_minimum_required(VERSION 3.5)
 
 SET(OPENCV_CPP_SAMPLES_REQUIRED_DEPS opencv_core opencv_imgproc opencv_flann
