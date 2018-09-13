@@ -2,15 +2,6 @@
 #  CMake file for C samples. See root CMakeLists.txt
 #
 # ----------------------------------------------------------------------------
-
-SET(OPENCV_CPP_SAMPLES_REQUIRED_DEPS opencv_core opencv_imgproc opencv_flann
-    opencv_imgcodecs opencv_videoio opencv_highgui opencv_ml opencv_video
-    opencv_objdetect opencv_photo opencv_features2d opencv_calib3d
-    opencv_stitching opencv_videostab opencv_shape ${OPENCV_MODULES_PUBLIC} ${OpenCV_LIB_COMPONENTS})
-
-ocv_check_dependencies(${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
-
-
 include(cmake/OpenCVMinDepVersions.cmake)
 
 if(CMAKE_GENERATOR MATCHES Xcode AND XCODE_VERSION VERSION_GREATER 4.3)
@@ -24,6 +15,13 @@ elseif(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES Windo
 else()
   cmake_minimum_required(VERSION "${MIN_VER_CMAKE}" FATAL_ERROR)
 endif()
+
+SET(OPENCV_CPP_SAMPLES_REQUIRED_DEPS opencv_core opencv_imgproc opencv_flann
+    opencv_imgcodecs opencv_videoio opencv_highgui opencv_ml opencv_video
+    opencv_objdetect opencv_photo opencv_features2d opencv_calib3d
+    opencv_stitching opencv_videostab opencv_shape ${OPENCV_MODULES_PUBLIC} ${OpenCV_LIB_COMPONENTS})
+
+ocv_check_dependencies(${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
 
 if(BUILD_EXAMPLES AND OCV_DEPENDENCIES_FOUND)
   project(cpp_samples)
