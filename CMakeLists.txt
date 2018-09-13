@@ -2,19 +2,6 @@
 #  CMake file for C samples. See root CMakeLists.txt
 #
 # ----------------------------------------------------------------------------
-include(cmake/OpenCVMinDepVersions.cmake)
-
-if(CMAKE_GENERATOR MATCHES Xcode AND XCODE_VERSION VERSION_GREATER 4.3)
-  cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
-elseif(CMAKE_SYSTEM_NAME MATCHES WindowsPhone OR CMAKE_SYSTEM_NAME MATCHES WindowsStore)
-  cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
-  #Required to resolve linker error issues due to incompatibility with CMake v3.0+ policies.
-  #CMake fails to find _fseeko() which leads to subsequent linker error.
-  #See details here: http://www.cmake.org/Wiki/CMake/Policies
-  cmake_policy(VERSION 2.8)
-else()
-  cmake_minimum_required(VERSION "${MIN_VER_CMAKE}" FATAL_ERROR)
-endif()
 
 SET(OPENCV_CPP_SAMPLES_REQUIRED_DEPS opencv_core opencv_imgproc opencv_flann
     opencv_imgcodecs opencv_videoio opencv_highgui opencv_ml opencv_video
@@ -22,6 +9,7 @@ SET(OPENCV_CPP_SAMPLES_REQUIRED_DEPS opencv_core opencv_imgproc opencv_flann
     opencv_stitching opencv_videostab opencv_shape ${OPENCV_MODULES_PUBLIC} ${OpenCV_LIB_COMPONENTS})
 
 ocv_check_dependencies(${OPENCV_CPP_SAMPLES_REQUIRED_DEPS})
+
 
 if(BUILD_EXAMPLES AND OCV_DEPENDENCIES_FOUND)
   project(cpp_samples)
