@@ -1,3 +1,3 @@
-mainprog.o:source.cpp
-	g++ `pkg-config --cflags opencv` -o t source.cpp `pkg-config --libs opencv`
+mainprog.o:stitching.cpp
+	g++ `pkg-config --cflags opencv` -o t stitching.cpp `pkg-config --libs opencv`
 
