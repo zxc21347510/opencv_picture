@@ -1,0 +1,30 @@
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local  -DINSTALL_C_EXAMPLES=ON   -DINSTALL_PYTHON_EXAMPLES=ON    -DBUILD_EXAMPLES=ON ..
+sudo make
+sudo make install
+
+sudo make -j4
+
+sudo apt-get remove opencv
+
+sudo nano OpenCVModule.cmake
+
+pkg-config --modversion opencv
+
+sudo apt-get remove libopencv-dev python-opencv
+sudo apt-get purge --auto-remove libopencv-dev python-opencv
+
+sudo apt-get remove cmake
+sudo apt-get purge --auto-remove cmake
+
+-alias cmake='/home/project108/cmake_3.5.1/install/3.5.0/bin/cmake'
+/home/project108/cmake_3.5.1/install/3.5.0/bin
+
+
+sudo wget https://sourceforge.net/projects/opencvlibrary/files/opencv-unix/3.4.0/opencv-3.4.0.zip/download
+sudo tar -xzvf opencv-3.4.0.zip
+sudo unzip opencv-3.4.0.zip
+
+/home/project108/opencv/opencv-3.4.0/build
+/home/project108/opencv/opencv-3.4.0/modules
+
+
